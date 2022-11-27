@@ -19,7 +19,6 @@ def read_root():
 @app.post("/predict")
 
 def predict(my_file: UploadFile = File(...)):
-#     print(os.getcwd() + "\\Tenjin_captcha\\" + my_file.filename) 
     filePath = os.getcwd() + "\\captcha_img\\" + my_file.filename
     result = reader.readtext(filePath)
     new_ls=[]
